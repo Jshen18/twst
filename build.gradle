@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'groovy'
+
+mainClassName = 'hello.HelloWorld'
+
+repositories {
+  jcenter()
+}
+
+dependencies {
+  compile 'org.codehaus.groovy:groovy-all:2.3.7'
+  testImplementation 'org.junit.jupiter:junit-jupiter-api:5.1.1'
+  testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.1.1'
+}
+
+test {
+  useJUnitPlatform()
+  testLogging {
+    showStandardStreams = true
+  }
+}
